@@ -19,12 +19,13 @@
 
 ## 🎯 文档体系概览
 
-本体系包含 **11 个标准文档模板**，覆盖产品、技术、测试、运维的全流程：
+本体系包含 **12 个标准文档模板**，覆盖产品、设计、技术、测试、运维的全流程：
 
 ```
 📦 ai-next
 ├── 📂 templates/          # 文档模板库
 │   ├── PRD/              # 产品需求文档
+│   ├── UI-design/        # UI/交互设计规范
 │   ├── Tech-design/      # 技术设计文档
 │   ├── API-doc/          # API 接口文档
 │   ├── BDD/              # 行为驱动开发文档
@@ -59,10 +60,11 @@ graph TB
     end
 
     PRD --> Meeting1[Meeting-notes<br/>需求评审会议]
-    Meeting1 --> Design
+    Meeting1 --> UIDesign
 
     subgraph Phase2["📝 设计阶段 (1-2周)"]
-        Design[Tech-design<br/>技术设计]
+        UIDesign[UI-design<br/>UI/交互设计]
+        UIDesign --> Design[Tech-design<br/>技术设计]
         Design --> API[API-doc<br/>接口设计]
         Design --> BDD[BDD<br/>行为规范]
     end
@@ -97,6 +99,7 @@ graph TB
     NextIteration -.经验积累.-> Start
 
     style PRD fill:#e1f5ff
+    style UIDesign fill:#fff3e0
     style Design fill:#fff3e0
     style API fill:#fff3e0
     style BDD fill:#fff3e0
@@ -128,7 +131,23 @@ graph TB
 
 ---
 
-#### 2. Tech-design - 技术设计文档
+#### 2. UI-design - UI/交互设计规范
+**用途**: 定义视觉设计和交互规范
+**负责人**: UI/UX 设计师
+**关注**: 视觉风格、交互模式、用户体验
+**模板位置**: `templates/UI-design/`
+
+**包含内容**:
+- 视觉设计规范（品牌色、字体、间距、圆角、阴影）
+- 组件库设计（按钮、输入框、卡片等）
+- 信息架构（页面结构、导航）
+- 交互设计（手势操作、状态反馈、动画）
+- 响应式设计（断点规范、适配策略）
+- 可访问性规范
+
+---
+
+#### 3. Tech-design - 技术设计文档
 **用途**: 详细的技术实现方案和架构设计
 **负责人**: 技术负责人/架构师
 **关注**: How（如何实现）
@@ -144,7 +163,7 @@ graph TB
 
 ---
 
-#### 3. API-doc - API 接口文档
+#### 4. API-doc - API 接口文档
 **用途**: 详细的 API 接口规范
 **负责人**: 后端开发
 **关注**: 接口契约
@@ -159,7 +178,7 @@ graph TB
 
 ---
 
-#### 4. BDD - 行为驱动开发文档
+#### 5. BDD - 行为驱动开发文档
 **用途**: 将需求转化为可执行的行为规范
 **负责人**: 产品/开发/测试共同编写
 **关注**: 可验证的行为
@@ -173,7 +192,7 @@ graph TB
 
 ---
 
-#### 5. Project-plan - 项目执行计划
+#### 6. Project-plan - 项目执行计划
 **用途**: 项目管理和执行跟踪
 **负责人**: 项目经理/Tech Lead
 **关注**: How & When（如何做、什么时候做）
@@ -190,21 +209,21 @@ graph TB
 
 ### 🟡 重要文档（推荐）
 
-#### 6. Test-plan - 测试计划
+#### 7. Test-plan - 测试计划
 **用途**: 测试策略和用例设计
 **负责人**: 测试工程师
 **模板位置**: `templates/Test-plan/`
 
 ---
 
-#### 7. Release-notes - 发布说明
+#### 8. Release-notes - 发布说明
 **用途**: 版本更新内容和升级指南
 **负责人**: 产品经理/技术负责人
 **模板位置**: `templates/Release-notes/`
 
 ---
 
-#### 8. Runbook - 运维手册
+#### 9. Runbook - 运维手册
 **用途**: 部署、监控、故障排查
 **负责人**: 运维工程师/SRE
 **模板位置**: `templates/Runbook/`
@@ -213,19 +232,19 @@ graph TB
 
 ### 🟢 辅助文档（可选）
 
-#### 9. Change-request - 需求变更单
+#### 10. Change-request - 需求变更单
 **用途**: 规范化需求变更流程
 **模板位置**: `templates/Change-request/`
 
 ---
 
-#### 10. Meeting-notes - 会议纪要
+#### 11. Meeting-notes - 会议纪要
 **用途**: 记录会议决策和行动项
 **模板位置**: `templates/Meeting-notes/`
 
 ---
 
-#### 11. Report - 周报/月报
+#### 12. Report - 周报/月报
 **用途**: 定期进度汇报
 **模板位置**: `templates/Report/`
 
@@ -266,37 +285,38 @@ cp templates/Tech-design/Tech-design-template.md projects/your-project-name/Tech
 3. PRD 批准并锁定
 
 #### 阶段 2: 设计（1-2周）
-4. 技术负责人编写 **Tech-design**
-5. 后端编写 **API-doc**
-6. 测试/开发共同编写 **BDD**
-7. 组织技术评审会议
+4. UI/UX 设计师编写 **UI-design**
+5. 技术负责人编写 **Tech-design**（参考 UI-design）
+6. 后端编写 **API-doc**
+7. 测试/开发共同编写 **BDD**
+8. 组织技术评审会议
 
 #### 阶段 3: 规划（3-5天）
-8. 项目经理创建 **Project-plan**
-9. 任务分解和排期
-10. 识别风险和依赖
-11. 组织项目启动会 (Kick-off)
+9. 项目经理创建 **Project-plan**
+10. 任务分解和排期
+11. 识别风险和依赖
+12. 组织项目启动会 (Kick-off)
 
 #### 阶段 4: 执行（4-8周）
-12. 开发按 BDD 规范实现功能
-13. 每周更新 **Report** 汇报进度
-14. 遇到需求变更填写 **Change-request**
-15. 定期更新 **Project-plan** 的进度和风险
+13. 开发按 BDD 规范实现功能
+14. 每周更新 **Report** 汇报进度
+15. 遇到需求变更填写 **Change-request**
+16. 定期更新 **Project-plan** 的进度和风险
 
 #### 阶段 5: 测试（1-2周）
-16. 测试编写 **Test-plan**
-17. 执行测试用例
-18. 缺陷修复和回归测试
+17. 测试编写 **Test-plan**
+18. 执行测试用例
+19. 缺陷修复和回归测试
 
 #### 阶段 6: 发布（1-3天）
-19. 编写 **Release-notes**
-20. 编写 **Runbook**
-21. 灰度发布或全量发布
+20. 编写 **Release-notes**
+21. 编写 **Runbook**
+22. 灰度发布或全量发布
 
 #### 阶段 7: 运维与复盘
-22. 根据 **Runbook** 进行日常运维
-23. 在 **Project-plan** 中填写项目复盘
-24. 总结经验，进入下一个迭代
+23. 根据 **Runbook** 进行日常运维
+24. 在 **Project-plan** 中填写项目复盘
+25. 总结经验，进入下一个迭代
 
 ---
 
@@ -327,6 +347,7 @@ cp templates/Tech-design/Tech-design-template.md projects/your-project-name/Tech
 | 文档 | 回答的问题 | 负责人 |
 |------|-----------|--------|
 | PRD | What & Why | 产品经理 |
+| UI-design | 视觉规范 & 交互模式 | UI/UX 设计师 |
 | Tech-design | How (技术) | 技术负责人 |
 | API-doc | 接口契约 | 后端开发 |
 | BDD | 如何验证 | 产品/开发/测试 |
@@ -425,9 +446,12 @@ cp templates/Tech-design/Tech-design-template.md projects/your-project-name/Tech
 graph TD
     PRD["PRD<br/>产品需求文档<br/>(What & Why)"]
 
+    PRD --> UIDesign["UI-design<br/>UI/交互设计<br/>(视觉规范)"]
     PRD --> BDD["BDD<br/>行为驱动开发<br/>(验证标准)"]
     PRD --> TechDesign["Tech-design<br/>技术设计<br/>(How - 技术)"]
     PRD --> ProjectPlan["Project-plan<br/>项目执行计划<br/>(When - 执行)"]
+
+    UIDesign --> TechDesign
 
     TechDesign --> API["API-doc<br/>接口文档"]
     TechDesign --> TestPlan["Test-plan<br/>测试计划"]
@@ -442,6 +466,7 @@ graph TD
     Release --> Runbook["Runbook<br/>运维手册"]
 
     style PRD fill:#e1f5ff,stroke:#01579b,stroke-width:3px
+    style UIDesign fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style BDD fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style TechDesign fill:#fff3e0,stroke:#e65100,stroke-width:2px
     style ProjectPlan fill:#e8f5e9,stroke:#1b5e20,stroke-width:2px
@@ -453,7 +478,7 @@ graph TD
 
 **说明**:
 - **蓝色**: 需求定义（PRD）- 一切的起点
-- **橙色**: 设计阶段（Tech-design、BDD）- 基于需求的设计
+- **橙色**: 设计阶段（UI-design、Tech-design、BDD）- 基于需求的设计
 - **绿色**: 项目管理（Project-plan）- 执行规划
 - **紫色**: 测试与接口（API-doc、Test-plan）- 实现和验证
 - **粉色**: 发布与运维（Release-notes、Runbook）- 交付和维护

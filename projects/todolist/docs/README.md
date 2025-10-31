@@ -41,7 +41,22 @@ docs/
 
 ---
 
-#### 2. [Tech-design - 技术设计文档](./Tech-design/Tech-design-todolist.md) ✅
+#### 2. [UI-design - UI/交互设计规范](./UI-design/UI-design-todolist.md) ✅
+**状态**: 已批准 | **负责人**: Grace (UI/UX Designer) | **版本**: v1.0 | **日期**: 2025-10-31
+
+**包含内容**:
+- 视觉设计规范（品牌色、字体、间距、圆角、阴影）
+- 组件库设计（按钮、输入框、卡片、列表、对话框）
+- 信息架构（页面结构、导航结构）
+- 页面设计（登录页、任务列表、编辑任务、个人中心、Web Admin）
+- 交互设计（手势操作、状态反馈、动画）
+- 响应式设计和可访问性规范
+
+**适合人群**: UI/UX 设计师、前端开发、产品经理
+
+---
+
+#### 3. [Tech-design - 技术设计文档](./Tech-design/Tech-design-todolist.md) ✅
 **状态**: 已批准 | **负责人**: Bob (Tech Lead) | **版本**: v1.0 | **日期**: 2025-10-28
 
 **包含内容**:
@@ -53,7 +68,7 @@ docs/
 
 ---
 
-#### 3. [API-doc - API 接口文档](./API-doc/API-doc-todolist.md) ✅
+#### 4. [API-doc - API 接口文档](./API-doc/API-doc-todolist.md) ✅
 **状态**: 已批准 | **负责人**: Eva (Backend Lead) | **版本**: v1.0 | **日期**: 2025-10-27
 
 **包含内容**:
@@ -65,7 +80,7 @@ docs/
 
 ---
 
-#### 4. [BDD - 行为驱动开发文档](./BDD/BDD-todolist.md) ✅
+#### 5. [BDD - 行为驱动开发文档](./BDD/BDD-todolist.md) ✅
 **状态**: 已完成 | **负责人**: Frank (QA) + Alice (PM) | **版本**: v1.0 | **日期**: 2025-10-25
 
 **包含内容**:
@@ -76,7 +91,7 @@ docs/
 
 ---
 
-#### 5. [Project-plan - 项目执行计划](./Project-plan/Project-plan-todolist.md) ✅
+#### 6. [Project-plan - 项目执行计划](./Project-plan/Project-plan-todolist.md) ✅
 **状态**: 已完成 | **负责人**: Bob (Tech Lead) | **版本**: v1.0 | **日期**: 2025-11-30
 
 **包含内容**:
@@ -88,7 +103,7 @@ docs/
 
 ---
 
-#### 6. [Release-notes - 发布说明](./Release-notes/Release-notes-todolist.md) ✅
+#### 7. [Release-notes - 发布说明](./Release-notes/Release-notes-todolist.md) ✅
 **状态**: 已发布 | **负责人**: Bob (Tech Lead) | **版本**: v1.0.0 | **日期**: 2025-11-30
 
 **包含内容**:
@@ -99,7 +114,7 @@ docs/
 
 ---
 
-#### 7. [Test-plan - 测试计划](./Test-plan/Test-plan-todolist.md) ✅
+#### 8. [Test-plan - 测试计划](./Test-plan/Test-plan-todolist.md) ✅
 **状态**: 已完成 | **负责人**: Frank (QA Lead) | **版本**: v1.0.0 | **日期**: 2025-11-25
 
 **包含内容**:
@@ -110,7 +125,7 @@ docs/
 
 ---
 
-#### 8. [Meeting-notes - 会议纪要](./Meeting-notes/) ✅
+#### 9. [Meeting-notes - 会议纪要](./Meeting-notes/) ✅
 
 **需求评审会议** (2025-10-15):
 - [需求评审会议纪要](./Meeting-notes/Meeting-notes-需求评审会议.md)
@@ -124,12 +139,13 @@ docs/
 
 ```mermaid
 graph LR
-    A[PRD 需求定义] -->|评审通过| B[Tech-design 技术设计]
-    B --> C[API-doc 接口设计]
-    B --> D[BDD 行为规范]
-    A --> E[Project-plan 项目计划]
-    D --> F[Test-plan 测试计划]
-    E --> F
+    A[PRD 需求定义] -->|评审通过| B[UI-design UI/交互设计]
+    B --> C[Tech-design 技术设计]
+    C --> D[API-doc 接口设计]
+    C --> E[BDD 行为规范]
+    A --> F[Project-plan 项目计划]
+    E --> G[Test-plan 测试计划]
+    F --> G
 ```
 
 ---
@@ -141,8 +157,13 @@ graph LR
 2. 参与 **BDD** 编写
 3. 定期查看 **Project-plan** 进度
 
+### 🎨 UI/UX 设计师
+1. 基于 **PRD** 创建 **UI-design**
+2. 定义视觉规范和组件库
+3. 与前端开发协作交付设计资源
+
 ### 👨‍💻 开发工程师
-1. 基于 **PRD** 和 **Tech-design** 开发
+1. 基于 **PRD**、**UI-design** 和 **Tech-design** 开发
 2. 参考 **API-doc** 进行接口对接
 3. 根据 **BDD** 编写自动化测试
 
