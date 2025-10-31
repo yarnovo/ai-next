@@ -27,8 +27,8 @@ docs/
 
 ### 核心文档
 
-#### 1. [PRD - 产品需求文档](./PRD/PRD-todolist-v1.0.md) ✅
-**状态**: 已批准 | **负责人**: Alice (Product Manager) | **版本**: v1.0
+#### 1. [PRD - 产品需求文档](./PRD/PRD-todolist.md) ✅
+**状态**: 已批准 | **负责人**: Alice (Product Manager) | **版本**: v1.0 | **日期**: 2025-10-17
 
 **包含内容**:
 - 项目背景和目标
@@ -41,46 +41,82 @@ docs/
 
 ---
 
-#### 2. Tech-design - 技术设计文档 ⏳
-**状态**: 待创建 | **负责人**: Bob (Tech Lead)
+#### 2. [Tech-design - 技术设计文档](./Tech-design/Tech-design-todolist.md) ✅
+**状态**: 已批准 | **负责人**: Bob (Tech Lead) | **版本**: v1.0 | **日期**: 2025-10-28
 
-**计划内容**:
-- 系统架构设计
-- 数据库设计
-- API 设计概览
-- 技术选型说明
+**包含内容**:
+- 微服务架构设计（user-service + todo-service）
+- 数据库设计（PostgreSQL + MySQL）
+- 技术栈选型（Python/Java/TypeScript）
+- 安全设计和性能优化
+- 技术决策记录 (ADR)
 
 ---
 
-#### 3. API-doc - API 接口文档 ⏳
-**状态**: 待创建 | **负责人**: Backend Team
+#### 3. [API-doc - API 接口文档](./API-doc/API-doc-todolist.md) ✅
+**状态**: 已批准 | **负责人**: Eva (Backend Lead) | **版本**: v1.0 | **日期**: 2025-10-27
 
-**计划内容**:
-- RESTful API 规范
-- 接口详细说明
+**包含内容**:
+- user-service API（认证、用户管理）
+- todo-service API（任务 CRUD）
 - 请求/响应示例
-- 错误码定义
+- 错误码说明
+- SDK 示例代码
 
 ---
 
-#### 4. BDD - 行为驱动开发文档 ⏳
-**状态**: 待创建 | **负责人**: QA Team + Product
+#### 4. [BDD - 行为驱动开发文档](./BDD/BDD-todolist.md) ✅
+**状态**: 已完成 | **负责人**: Frank (QA) + Alice (PM) | **版本**: v1.0 | **日期**: 2025-10-25
 
-**计划内容**:
+**包含内容**:
 - Gherkin 格式用户场景
-- 验收测试标准
-- 自动化测试基础
+- 用户认证场景（注册、登录）
+- 任务管理场景（CRUD、筛选）
+- 验收标准清单
 
 ---
 
-#### 5. Project-plan - 项目执行计划 ⏳
-**状态**: 待创建 | **负责人**: PM Team
+#### 5. [Project-plan - 项目执行计划](./Project-plan/Project-plan-todolist.md) ✅
+**状态**: 已完成 | **负责人**: Bob (Tech Lead) | **版本**: v1.0 | **日期**: 2025-11-30
 
-**计划内容**:
-- 项目里程碑
+**包含内容**:
+- 项目团队组成
+- Gantt 图（需求→设计→开发→测试→发布）
 - 任务分解 (WBS)
-- 时间计划 (Gantt)
 - 风险管理
+- 项目复盘
+
+---
+
+#### 6. [Release-notes - 发布说明](./Release-notes/Release-notes-todolist.md) ✅
+**状态**: 已发布 | **负责人**: Bob (Tech Lead) | **版本**: v1.0.0 | **日期**: 2025-11-30
+
+**包含内容**:
+- V1.0.0 新功能列表
+- 技术栈说明
+- 部署指南
+- 已知问题
+
+---
+
+#### 7. [Test-plan - 测试计划](./Test-plan/Test-plan-todolist.md) ✅
+**状态**: 已完成 | **负责人**: Frank (QA Lead) | **版本**: v1.0.0 | **日期**: 2025-11-25
+
+**包含内容**:
+- 测试策略和类型（单元、集成、E2E、UAT）
+- 详细测试用例（30+ 个）
+- 缺陷统计和管理
+- 测试结论：✅ 通过，建议发布
+
+---
+
+#### 8. [Meeting-notes - 会议纪要](./Meeting-notes/) ✅
+
+**需求评审会议** (2025-10-15):
+- [需求评审会议纪要](./Meeting-notes/Meeting-notes-需求评审会议.md)
+- PRD 批准决策
+- 微服务架构确认
+- 功能范围界定
 
 ---
 
