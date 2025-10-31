@@ -191,9 +191,7 @@ Release Notes
 - ✅ 如何验证？(BDD + Test-plan)
 - ✅ 何时发布？(Release-notes)
 
-#### 3.4 Single Code Tree - 一切都在 Git 里统一管理
-
-**所有产出物统一在一个代码仓库中管理**:
+**Single Source Tree - 所有产出物统一在一个代码仓库中管理**:
 
 ```
 ai-next/                    # 单一代码树
@@ -206,7 +204,7 @@ ai-next/                    # 单一代码树
 └── .git/                   # 统一的版本控制
 ```
 
-**为什么 Single Code Tree？**
+**为什么 Single Source Tree？**
 - 📦 **统一管理**: 文档、代码、测试、配置全部在 Git 中
 - 🔍 **完整追溯**: 任何改动都有 Git 历史记录
 - 🤝 **协作透明**: Code Review 包括文档和代码
@@ -217,7 +215,7 @@ ai-next/                    # 单一代码树
 
 **这是 AI-Native 开发提效的核心**
 
-Single Code Tree 让 AI 能够一次性获取项目的完整上下文：
+Single Source Tree 让 AI 能够一次性获取项目的完整上下文：
 
 ```bash
 # AI 可以在一个仓库中读取所有信息
@@ -233,7 +231,7 @@ ai-next/
 
 **传统开发 vs AI-Native 开发**
 
-| 维度 | 传统开发 | AI-Native (Single Code Tree) |
+| 维度 | 传统开发 | AI-Native (Single Source Tree) |
 |------|---------|----------------------------|
 | 需求文档 | Confluence/Wiki | Git 仓库中的 Markdown |
 | 设计文档 | Google Docs | Git 仓库中的 Markdown |
@@ -244,7 +242,7 @@ ai-next/
 | **上下文完整性** | ❌ 分散，容易遗漏 | ✅ 集中，完整一致 |
 | **开发效率** | 1x | **3-5x** |
 
-**AI 如何利用 Single Code Tree 提效？**
+**AI 如何利用 Single Source Tree 提效？**
 
 1. **理解需求时**
    ```bash
