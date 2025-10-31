@@ -618,7 +618,7 @@ cp templates/Tech-design/Tech-design-template.md \
 
 ## 📞 联系方式
 
-- **项目维护者**: Yarn B
+- **项目维护者**: Yarnb
 - **GitHub Issues**: 问题反馈和讨论
 - **Email**: yarnb@qq.com
 
