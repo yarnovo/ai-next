@@ -1,0 +1,343 @@
+# AI-Next Project .gitignore
+
+# ==========================================
+# 操作系统
+# ==========================================
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.DocumentRevisions-V100
+.fseventsd
+.Spotlight-V100
+.TemporaryItems
+.Trashes
+.VolumeIcon.icns
+.com.apple.timemachine.donotpresent
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+
+# ==========================================
+# IDE & 编辑器
+# ==========================================
+
+# VS Code
+.vscode/
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+*.code-workspace
+
+# JetBrains (IntelliJ, PyCharm, WebStorm)
+.idea/
+*.iml
+*.iws
+*.ipr
+out/
+
+# Sublime Text
+*.sublime-project
+*.sublime-workspace
+
+# Vim
+*.swp
+*.swo
+*~
+
+# Emacs
+*~
+\#*\#
+/.emacs.desktop
+/.emacs.desktop.lock
+auto-save-list
+tramp
+
+# ==========================================
+# Python
+# ==========================================
+
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Distribution / packaging
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+# Virtual environments
+venv/
+env/
+ENV/
+.venv/
+.env
+.virtualenv
+pipenv/
+poetry.lock
+
+# Pytest
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+
+# Jupyter Notebook
+.ipynb_checkpoints
+
+# pyenv
+.python-version
+
+# ==========================================
+# Node.js / JavaScript / TypeScript
+# ==========================================
+
+# Dependencies
+node_modules/
+jspm_packages/
+bower_components/
+
+# Build outputs
+dist/
+build/
+.next/
+out/
+.nuxt/
+.cache/
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+pnpm-debug.log*
+
+# Package manager
+.npm
+.yarn/
+.pnp/
+.pnp.js
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# Testing
+coverage/
+.nyc_output
+
+# TypeScript
+*.tsbuildinfo
+
+# ==========================================
+# Java / Spring Boot
+# ==========================================
+
+# Maven
+target/
+pom.xml.tag
+pom.xml.releaseBackup
+pom.xml.versionsBackup
+pom.xml.next
+release.properties
+dependency-reduced-pom.xml
+buildNumber.properties
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+.gradletasknamecache
+
+# JAR / WAR / EAR
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# Compiled class files
+*.class
+
+# Spring Boot
+HELP.md
+.mvn/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# ==========================================
+# React Native / Expo
+# ==========================================
+
+# Expo
+.expo/
+.expo-shared/
+*.jks
+*.p8
+*.p12
+*.key
+*.mobileprovision
+*.orig.*
+web-build/
+
+# Android
+android/
+!android/.gitkeep
+*.apk
+*.aab
+local.properties
+
+# iOS
+ios/
+!ios/.gitkeep
+*.ipa
+*.dSYM.zip
+*.dSYM
+Pods/
+*.xcworkspace
+!default.xcworkspace
+xcuserdata/
+
+# ==========================================
+# 数据库
+# ==========================================
+
+# SQLite
+*.db
+*.sqlite
+*.sqlite3
+
+# PostgreSQL
+*.sql
+*.dump
+
+# MySQL
+*.sql
+
+# ==========================================
+# 环境变量和密钥
+# ==========================================
+
+# Environment files
+.env
+.env.local
+.env.development
+.env.test
+.env.production
+.env.*.local
+
+# Secrets
+secrets/
+*.key
+*.pem
+*.crt
+*.p12
+credentials.json
+service-account.json
+
+# ==========================================
+# 日志文件
+# ==========================================
+
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# ==========================================
+# 临时文件
+# ==========================================
+
+tmp/
+temp/
+*.tmp
+*.bak
+*.cache
+
+# ==========================================
+# Docker
+# ==========================================
+
+# Docker volumes
+docker-compose.override.yml
+.dockerignore
+
+# ==========================================
+# 云服务
+# ==========================================
+
+# AWS
+.aws/
+
+# GCP
+.gcp/
+
+# Terraform
+.terraform/
+*.tfstate
+*.tfstate.backup
+.terraform.lock.hcl
+
+# ==========================================
+# 项目特定
+# ==========================================
+
+# Claude Code settings (保留示例，忽略个人配置)
+.claude/settings.local.json
+
+# 草稿和笔记
+drafts/
+notes/
+scratch/
+
+# 生成的文档
+generated-docs/
+
+# 测试数据
+test-data/
+fixtures/
+
+# 备份文件
+backup/
+*.backup
+
+# ==========================================
+# 保留的文件（不忽略）
+# ==========================================
+
+# 确保这些文件不被忽略
+!.gitkeep
+!.gitignore
+!.editorconfig
+!.prettierrc
+!.eslintrc
